@@ -1,0 +1,23 @@
+{
+  "name": "Punkjs Server",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["server.js"]
+    }
+  },
+  "permissions": [
+    {
+      "fileSystem": ["retainEntries", "directory"]
+    },
+    "storage"
+  ],
+  "file_handlers": {
+    "text": {
+      "types": [
+          "text/*"
+      ]
+    }
+  }
+}

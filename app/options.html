@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>punkjs</title>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/skeleton.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 20px;
+    }
+
+    button {
+      margin-right: 2rem;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h4>Punkjs Setup</h4>
+
+<p>
+  For security reasons, you need to explicitly grant this app access to your ~/.js directory.
+</p>
+
+<h5>
+  Select your ~/.js directory.
+</h5>
+
+<p>
+  If you can't see hidden files, hit <code>cmd + shift + .</code>.
+</p>
+
+<p>
+  <button class='button-primary' id='finder'>Open</button><span id='path'></span>
+</p>
+
+<p class='error hide'></p>
+
+<script src='options.js'></script>
+</body>
+</html>
