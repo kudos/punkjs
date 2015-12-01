@@ -15,7 +15,7 @@ function finder() {
           storeEntry(found);
         } else {
           document.querySelector('.error').classList.remove('hide');
-          document.querySelector('.error').innerText = 'Selected path does not seem to be or contain your .js directory.';
+          document.querySelector('.error').innerText = 'Selected path does not seem to be or to contain your .js directory.';
           setTimeout(() => {
             document.querySelector('.error').classList.add('hide');
           }, 5000);
@@ -30,6 +30,7 @@ function storeEntry(entry) {
     directoryEntryId: chrome.fileSystem.retainEntry(entry)
   }, function() {
     document.getElementById('path').innerText = 'Currently selected: ' + entry.name;
+    chrome.runtime.reload();
   });
 }
 
