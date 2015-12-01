@@ -43,12 +43,16 @@ chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => 
   return true;
 });
 
+chrome.app.runtime.onLaunched.addListener((data) => {
+  filePrompt();
+});
+
 function filePrompt() {
   chrome.app.window.create('options.html', {
     id: "optionsId",
     innerBounds: {
-      width: 400,
-      height: 380
+      width: 500,
+      height: 350
     }
   });
 }
