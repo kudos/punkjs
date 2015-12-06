@@ -6,7 +6,7 @@ Punkjs is a [Chrome extension](https://chrome.google.com/webstore/detail/dkjpmgl
 
 > Punk is the phonetic spelling of the Irish word for dot, "ponc". I wanted to call this "Poncjs", but I also didn't want it to be difficult to search for.
 
-It is the spiritual successor to dotjs, which is no longer maintained.
+It is the spiritual successor to [dotjs](https://github.com/defunkt/dotjs), which is no longer maintained.
 
 Extensions have security restrictions that stop them reading from the filesystem, so you'll also need to install the [Punkjs Bridge](https://chrome.google.com/webstore/detail/ecnapnimgoienbogbgcmchpgjbgeaobk) App.
 
