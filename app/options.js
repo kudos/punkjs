@@ -11,7 +11,6 @@ function storeEntry(entry) {
   }, function() {
     chrome.fileSystem.getDisplayPath(entry, (displayPath) => {
       document.getElementById('path').innerText = 'Currently selected: ' + displayPath;
-      document.getElementById('success').classList.add('remove');
     });
   });
 }
