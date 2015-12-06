@@ -1,12 +1,22 @@
 {
   "name": "Punkjs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "manifest_version": 2,
-  "description": "",
+  "description": "Punkjs is a Chrome extension that allows you to load Javascript files into web pages based on the filename.",
+  "author": "Jonathan Cremin <jonathan@crem.in>",
+  "homepage_url": "https://github.com/kudos/punkjs",
+  "minimum_chrome_version": "46",
+  "icons": {
+    "128": "icon-128.png"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["client.js"]
+      "js": ["bridge-id.js", "index.js"]
     }
-  ]
+  ],
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  }
 }

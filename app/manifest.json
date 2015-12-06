@@ -1,10 +1,16 @@
 {
-  "name": "Punkjs Server",
-  "version": "0.0.4",
+  "name": "Punkjs Bridge",
+  "version": "0.1.0",
   "manifest_version": 2,
+  "description": "Punkjs Bridge is a Chrome app that facilitates loading of Javascript from ~/.js for its companion extension.",
+  "author": "Jonathan Cremin <jonathan@crem.in>",
+  "minimum_chrome_version": "46",
+  "icons": {
+    "128": "icon-padded-128.png"
+  },
   "app": {
     "background": {
-      "scripts": ["server.js"]
+      "scripts": ["index.js"]
     }
   },
   "permissions": [

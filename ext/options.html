@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Punkjs Setup</title>
+  <style>
+  .hide {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <p>
+    For security reasons, extensions don't have the ability to read from disk. Because of this you need to use a companion app to select and read your .js directory.
+  </p>
+
+  <div id='notfound' class='hide'>
+     <p>
+       Unable to communicate with the Punkjs Bridge app, have you installed it?
+     </p>
+     <p>
+       <button id='install'>Install App</button> or <a id='try-again' href='#'>Try Again</a>
+     </p>
+  </div>
+
+  <div id='launched' class='hide'>
+    <p>
+      App window was launched.
+    </p>
+    <p>
+      <button id='close'>Close</button>
+    </p>
+  </div>
+
+  <script src='bridge-id.js'></script>
+  <script src='options.js'></script>
+</body>
+</html>

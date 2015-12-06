@@ -9,6 +9,10 @@
       margin: 20px;
     }
 
+    h4 {
+      line-height: 48px;
+    }
+
     button {
       margin-right: 2rem;
     }
@@ -17,32 +21,33 @@
       color: red;
     }
 
-    .hide {
-      display: none;
+    blockquote {
+      margin-left: 0;
+      padding-left: 1.5rem;
+      border-left: 0.5rem #eee solid;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-<h4>Punkjs Setup</h4>
+<h4>Punkjs Setup <img src='icon-padded-128.png' height='48' style='float:right'></h4>
 
 <p>
-  For security reasons, you need to explicitly grant this app access to your ~/.js directory.
+  For security reasons, you need to explicitly grant this app access to your ~/.js directory. You do not need to keep this window open for Punkjs to work.
 </p>
 
 <p>
-  Select your ~/.js directory. The naming is by convention, it can be any directory you like.
-</p>
-
-<p>
-  If you can't see hidden files, hit <code>cmd + shift + .</code> with the file selector open.
+  Select your ~/.js directory. This naming is by convention, but it can be any directory you like.
 </p>
 
 <p>
   <button class='button-primary' id='finder'>Open</button><span id='path'></span>
 </p>
 
-<p class='error hide'></p>
+<blockquote>
+  <strong>Tip:</strong> If you can't see hidden files, hit <code>&#x2318</code>+<code>&#x21E7</code>+<code>.</code> together with the file selector open.
+</blockquote>
 
 <script src='options.js'></script>
 </body>
