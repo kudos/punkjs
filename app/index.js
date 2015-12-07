@@ -20,6 +20,17 @@ chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => 
           getFiles(items.directoryEntryId, (entries) => {
             var matches = matchDomain(request.location.hostname, entries);
             Promise.all(matches).then((files) => {
+              var defaultJs = entries.find((file) => {
+                if (file.name == 'default.js') {
+                  return file;
+                }
+              });
+
+              if (defaultJs) {
+                return readFile(defaultJs).then((contents) => {
+                  sendResponse(contents + files.join(';'));
+                });
+              }
               sendResponse(files.join(';'));
             });
           });
