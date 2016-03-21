@@ -24,6 +24,8 @@ The Punkjs extension and Punkjs Bridge app use the Chrome runtime messaging API 
 
 Whenever you navigate to a webpage the extension will tell the bridge what domain the page is on. The bridge will try to find matching files, starting with the TLD and working down through the levels (com.js, google.com.js, mail.google.com.js, etc.). The extension then runs the returned Javascript in the context of the page.
 
+You can also define a `default.js` file which will run on every page load, which can be useful for things like loading [jQuery](https://jquery.com/).
+
 ## Requirements
 
 * Mac, Windows or Linux
